@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ResumeApp</string>
+    <string name="no_resumes_yet">Welcome you have no Resumes yet</string>
+    <string name="new_resume">New Resume</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="gmail_com">ericomartin.0785@gmail.com</string>
+    <string name="email_of_the_user">Email of the user</string>
+    <string name="title_of_the_job">Title of the Job</string>
+    <string name="job_description">Android Developer</string>
+    <string name="experience_text">I have 3 Years Experience in Android development using Java and Kotlin</string>
+    <string name="bsc_computer_science">Bsc Computer Science</string>
+    <string name="skills_text">I am proficient in Kotlin and Java Programming. I have basic Knowledge of full stack web development in HTML, CSS, JavaScript, React and NodeJS. I also work very well in Python, SQL and Power-BI for Data Analysis. This are the Skills are will be offering when hired.</string>
+    <string name="my_skills">My Skills:</string>
+    <string name="qualification">Qualification:</string>
+    <string name="experience">Experience:</string>
+    <string name="about_me">About Me</string>
+    <string name="full_name_of_user">Full name of user</string>
+    <string name="full_name">IBU Omenka Eric</string>
+    <string name="image_of_the_user">Image of the user</string>
+    <string name="phone">+2348100058616</string>
+    <string name="github_link">Github link</string>
+    <string name="github">Github</string>
+    <string name="linkedin_link">Linkedin link</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="save_resume">Save Resume</string>
+    <string name="image_uploaded_100">Image uploaded 100%</string>
+    <string name="_name">Full Name</string>
+    <string name="experience_years">Experience (years)</string>
+    <string name="skills_what_you_can_do">Skills (what you can do)</string>
+    <string name="empty_not_saved">Your data is not correct</string>
+</resources>

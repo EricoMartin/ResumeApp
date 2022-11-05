@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/resumeFragment">
+
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="com.basebox.resumeapp.ui.ResumeFragment"
+        android:label="fragment_resume"
+        tools:layout="@layout/fragment_resume" >
+        <action
+            android:id="@+id/action_resumeFragment_to_createResumeFragment"
+            app:destination="@id/createResumeFragment" />
+        <action
+            android:id="@+id/action_resumeFragment_to_resumeListFragment"
+            app:destination="@id/resumeListFragment" />
+        <action
+            android:id="@+id/action_resumeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createResumeFragment"
+        android:name="com.basebox.resumeapp.ui.CreateResumeFragment"
+        android:label="fragment_create_resume"
+        tools:layout="@layout/fragment_create_resume" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.basebox.resumeapp.ui.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/resumeListFragment"
+        android:name="com.basebox.resumeapp.ui.ResumeListFragment"
+        android:label="fragment_resume_list"
+        tools:layout="@layout/fragment_resume_list" />
+</navigation>
