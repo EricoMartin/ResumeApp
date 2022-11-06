@@ -25,5 +25,3 @@ The design is a quite simple one from off my head. plus im not good with design.
 I would like to authentication, internationalization, dowmload functionality and ability to save other kinds of documents for easy access and retrival.
 
 
-
-<img src=""/>
