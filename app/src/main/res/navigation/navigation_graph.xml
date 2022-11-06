@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/resumeFragment">
+    app:startDestination="@id/resumeListFragment">
 
     <fragment
         android:id="@+id/resumeFragment"
@@ -19,19 +19,55 @@
         <action
             android:id="@+id/action_resumeFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
     <fragment
         android:id="@+id/createResumeFragment"
         android:name="com.basebox.resumeapp.ui.CreateResumeFragment"
         android:label="fragment_create_resume"
-        tools:layout="@layout/fragment_create_resume" />
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.basebox.resumeapp.ui.SettingsFragment"
-        android:label="SettingsFragment" />
+        tools:layout="@layout/fragment_create_resume" >
+        <action
+            android:id="@+id/action_createResumeFragment_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+        <action
+            android:id="@+id/action_createResumeFragment_to_resumeListFragment"
+            app:destination="@id/resumeListFragment" />
+        <action
+            android:id="@+id/action_createResumeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resumeListFragment"
         android:name="com.basebox.resumeapp.ui.ResumeListFragment"
-        android:label="fragment_resume_list"
-        tools:layout="@layout/fragment_resume_list" />
+        android:label="ResumeListFragment" >
+        <action
+            android:id="@+id/action_resumeListFragment_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+        <action
+            android:id="@+id/action_resumeListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_resumeListFragment_self"
+            app:destination="@id/resumeListFragment" />
+        <action
+            android:id="@+id/action_resumeListFragment_to_createResumeFragment"
+            app:destination="@id/createResumeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.basebox.resumeapp.ui.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_resumeListFragment"
+            app:destination="@id/resumeListFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment" />
+    </fragment>
 </navigation>

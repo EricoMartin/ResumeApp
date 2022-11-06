@@ -1,5 +1,6 @@
 package com.basebox.resumeapp.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -16,7 +17,7 @@ interface ResumeDao {
     @Query("SELECT * FROM resume ORDER BY name ASC")
     fun getAll(): Flow<List<Resume>>
 
-    @Query("SELECT * from Resume WHERE name Like :resume Limit 1")
+    @Query("SELECT * from Resume WHERE name = :resume Limit 1")
     fun getResume(resume: String): Resume
 
     @Query("Delete from resume")

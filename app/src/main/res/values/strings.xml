@@ -43,4 +43,8 @@
     <string name="experience_years">Experience (years)</string>
     <string name="skills_what_you_can_do">Skills (what you can do)</string>
     <string name="empty_not_saved">Your data is not correct</string>
+    <string name="clickable_button">Clickable button</string>
+    <string name="click_to_upload_image">Click to upload Image</string>
+    <string name="all_resumes">All Resumes</string>
+    <string name="settings">Settings</string>
 </resources>

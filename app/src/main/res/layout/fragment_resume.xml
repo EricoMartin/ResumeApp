@@ -15,7 +15,7 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scroll_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="640dp"
             android:clickable="true"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/clickable_button"
             android:focusable="true"
             android:src="@drawable/ic_baseline_add_24"
             app:backgroundTint="#51AEF4"
@@ -268,32 +268,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linear_compat"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="260dp"
-            android:layout_marginEnd="24dp"
-            android:text="@string/no_resumes_yet"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <Button
-            android:id="@+id/new_resume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="16dp"
-            android:text="@string/new_resume" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
 </FrameLayout>

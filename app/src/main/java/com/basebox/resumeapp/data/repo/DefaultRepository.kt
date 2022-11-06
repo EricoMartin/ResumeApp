@@ -1,8 +1,10 @@
 package com.basebox.resumeapp.data.repo
 
 import android.util.Log
+import androidx.lifecycle.asLiveData
 import com.basebox.resumeapp.data.dao.ResumeDao
 import com.basebox.resumeapp.data.model.Resume
+import com.basebox.resumeapp.util.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
@@ -13,11 +15,12 @@ class DefaultRepository @Inject constructor (
         ): MainRepository {
     override val getAllResumes: Flow<List<Resume>> = resDao.getAll()
 
-    override suspend fun getResume(username: String): Resume {
-        val getResFromDB = withContext(Dispatchers.IO) {
-            resDao.getResume(username)}
-        Log.d("DefaultRepo", "$getResFromDB")
-        return getResFromDB
+    override suspend fun getResume(username: String):Resume{
+        val getStuff = withContext(Dispatchers.IO) {
+             resDao.getResume(username)
+        }
+        Resource.Success(getStuff)
+        return getStuff
     }
 
     override suspend fun insertResume(resume: Resume) {

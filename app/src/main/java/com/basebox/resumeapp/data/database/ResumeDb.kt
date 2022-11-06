@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.basebox.resumeapp.data.dao.ResumeDao
 import com.basebox.resumeapp.data.model.Resume
 
-@Database(entities = [Resume::class], version = 1, exportSchema = false)
+@Database(entities = [Resume::class], version = 3, exportSchema = false)
 abstract class ResumeDb: RoomDatabase() {
     abstract val resumeDao: ResumeDao
 
