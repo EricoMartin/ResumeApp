@@ -52,29 +52,28 @@ class ResumeFragment : Fragment() {
             Log.e("ResumeFragment", "Fragment received information")
             val args = ResumeFragmentArgs.fromBundle(bundle!!)
 
-            lifecycleScope.launchWhenCreated {
-                val username = sharedPref.getString("name_key",
-                    null)
-                val user = viewModel.showResume(username!!)
-
-                    _binding!!.textView.text = user.name
-                    _binding!!.textView2.text = user.title
-                    _binding!!.textView8.text = user.email
-                    _binding!!.textView9.text = user.phone
-                    _binding!!.textView5.text = user.experience
-                    _binding!!.textView6.text = user.qualification
-                    _binding!!.textView7.text = user.skills
-                    _binding!!.textView10.text = user.linkedin
-                    _binding!!.textView11.text = user.github
-
-                    val uri = Uri.parse(user.image)
-                    Glide.with(requireContext())
-                        .load(File(uri.path!!))
-                        .centerCrop()
-                        .into(_binding!!.imageView)
-                }
+//            lifecycleScope.launchWhenCreated {
+//                val username = sharedPref.getString("name_key",
+//                    null)
+//                val user = viewModel.showResume(username!!)
+//
+//                    _binding!!.textView.text = user.name
+//                    _binding!!.textView2.text = user.title
+//                    _binding!!.textView8.text = user.email
+//                    _binding!!.textView9.text = user.phone
+//                    _binding!!.textView5.text = user.experience
+//                    _binding!!.textView6.text = user.qualification
+//                    _binding!!.textView7.text = user.skills
+//                    _binding!!.textView10.text = user.linkedin
+//                    _binding!!.textView11.text = user.github
+//
+//                    val uri = Uri.parse(user.image)
+//                    Glide.with(requireContext())
+//                        .load(File(uri.path!!))
+//                        .centerCrop()
+//                        .into(_binding!!.imageView)
+//                }
             }
-
         return binding.root
     }
 
